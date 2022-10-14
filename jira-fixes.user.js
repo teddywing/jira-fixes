@@ -8,13 +8,6 @@
 // @grant       none
 // ==/UserScript==
 
-function focus_left_content_column_v1 () {
-	var left_column_content = document.querySelector(
-		'[data-testid="issue.views.issue-details.issue-layout.container-left"]'
-	);
-	left_column_content.focus();
-}
-
 function focus_left_content_column () {
 	var observer = new MutationObserver(function(mutation_list) {
 		for (var i = 0; i < mutation_list.length; i++) {
