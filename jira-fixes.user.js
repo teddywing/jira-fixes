@@ -8,7 +8,15 @@
 // @grant       none
 // ==/UserScript==
 
-function focus_left_content_column () {
+// On the ticket page, the left content column is not necessarily focused on
+// page load. This means that the arrow keys and page up/down don't scroll the
+// left content column.
+//
+// Wait until the left content column is added to the document body and focus
+// it.
+//
+// Not sure yet how to get this to work with Vimium.
+function ticket_page_focus_left_content_column () {
 	var observer = new MutationObserver(function(mutation_list) {
 		for (var i = 0; i < mutation_list.length; i++) {
 			var mutation = mutation_list[i];
@@ -34,4 +42,4 @@ function focus_left_content_column () {
 	);
 }
 
-focus_left_content_column();
+ticket_page_focus_left_content_column();
