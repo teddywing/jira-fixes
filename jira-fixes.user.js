@@ -45,6 +45,7 @@ function ticket_page_focus_left_content_column () {
 			}
 
 			left_column_content.focus();
+			observer.disconnect();
 		}
 
 	});
